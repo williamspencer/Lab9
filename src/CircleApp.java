@@ -1,17 +1,18 @@
 import java.util.Scanner;
 
+import shapes.Circle;
+
 public class CircleApp {
 
 	public static void main(String[] args) {
 		String user = "y";
 		Scanner scan1 = new Scanner(System.in);
-		Validator v1 = new Validator();
 		double input = 0.0;
 		
 		System.out.println("Welcome to the Circle Tester");
 		do {
 		System.out.print("Enter a radius: ");
-		input = v1.getValidDouble(0, Double.MAX_VALUE);
+		input = Validator.getValidDouble(0, Double.MAX_VALUE);
 		
 		Circle c1 = new Circle(input);
 		
